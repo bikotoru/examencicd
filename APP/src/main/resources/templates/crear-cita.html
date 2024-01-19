@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para las secciones */
+        .section {
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Crear Cita</h2>
+    <form action="/guardar-cita" method="post">
+        <!-- Sección de Datos de Mascota -->
+        <div class="section">
+            <h3>Datos de Mascota</h3>
+            <label for="nombreMascota">Nombre de la Mascota:</label>
+            <input type="text" id="nombreMascota" name="nombreMascota" required/><br/><br/>
+
+            <label for="tipoMascota">Tipo de Mascota:</label>
+            <input type="text" id="tipoMascota" name="tipoMascota" required/><br/><br/>
+
+            <label for="edad">Edad de la Mascota:</label>
+            <input type="text" id="edad" name="edad" required/><br/><br/>
+        </div>
+
+        <!-- Sección de Datos de Dueño -->
+        <div class="section">
+            <h3>Datos de Dueño</h3>
+            <label for="rutDueño">Rut del Dueño:</label>
+            <input type="text" id="rutDueño" name="rutDueño" required/><br/><br/>
+
+            <label for="nombreDueño">Nombre del Dueño:</label>
+            <input type="text" id="nombreDueño" name="nombreDueño" required/><br/><br/>
+
+            <label for="apellido">Apellido del Dueño:</label>
+            <input type="text" id="apellido" name="apellido" required/><br/><br/>
+
+            <label for="direccion">Dirección del Dueño:</label>
+            <input type="text" id="direccion" name="direccion" required/><br/><br/>
+
+            <label for="correo">Correo del Dueño:</label>
+            <input type="text" id="correo" name="correo" required/><br/><br/>
+
+            <label for="telefono">Teléfono del Dueño:</label>
+            <input type="text" id="telefono" name="telefono" required/><br/><br/>
+        </div>
+
+        <!-- Sección de Datos de Agenda -->
+        <div class="section">
+            <h3>Datos de Agenda</h3>
+            <label for="hora">Hora:</label>
+            <input type="text" id="hora" name="hora" required/><br/><br/>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required/><br/><br/>
+        </div>
+
+        <button type="submit" name="crear-cita">Guardar Cita</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .create-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .create-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Agenda</h2>
+    <a class="create-button" name="create-button" href="/crear-cita">Crear Cita</a>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre Mascota</th>
+            <th>Rut Dueño</th>
+            <th>Hora</th>
+            <th>Fecha</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="cita : ${agenda}">
+            <td th:text="${cita.getId()}"></td>
+            <td th:text="${cita.getMascota().getNombreMascota()}"></td>
+            <td th:text="${cita.getDueño().getRut()}"></td>
+            <td th:text="${cita.getHora()}"></td>
+            <td th:text="${cita.getFecha()}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

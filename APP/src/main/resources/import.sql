@@ -1,0 +1,1 @@
+insert into usuarios (id, nombre_usuario, password) values (1, 'admin', 'admin');
